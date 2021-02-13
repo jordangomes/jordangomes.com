@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "nuxt-ts",
-    "dev:share": "nuxt-ts --hostname '0.0.0.0' --port 8000",
+    "dev:share": "nuxt-ts --hostname '0.0.0.0' --port 3000",
     "build": "nuxt-ts build",
     "start": "nuxt-ts start",
     "generate": "nuxt-ts generate",
