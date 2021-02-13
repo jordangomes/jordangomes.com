@@ -29,6 +29,34 @@
         const options = { year: 'numeric', month: 'long', day: 'numeric' }
         return new Date(date).toLocaleDateString('en', options)
       }
+    },
+    head() {
+      return {
+        title: this.article.title,
+        meta: [
+          {
+            hid: 'description',
+            name: 'description',
+            content: this.article.description
+          }, {
+            hid: 'og:title',
+            name: 'og:title',
+            content: this.article.title
+          }, {
+            hid: 'og:type',
+            name: 'og:type',
+            content: 'article'
+          }, {
+            hid: 'og:image',
+            name: 'og:image',
+            content: `https://jordangomes.com${this.article.img}`
+          }, {
+            hid: 'og:description',
+            name: 'og:description',
+            content: this.article.description
+          }
+        ]
+      }
     }
   }
 </script>
