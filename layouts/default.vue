@@ -1,0 +1,42 @@
+<template>
+  <div>
+    <Nuxt />
+  </div>
+</template>
+
+<style>
+html {
+  font-family:
+    'Open Sans',
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    Roboto,
+    'Helvetica Neue',
+    Arial,
+    sans-serif;
+  font-size: 16px;
+  word-spacing: 1px;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+  background-color: #7f0c82;
+  background-image: linear-gradient(
+    170deg,
+    #080f36, 
+    #7f0c82, 
+    #e22c87
+  );
+  min-height: 100%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+</style>
