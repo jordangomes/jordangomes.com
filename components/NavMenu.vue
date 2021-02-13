@@ -1,8 +1,8 @@
 <template>
     <nav>
         <NuxtLink to="/blog">blog</NuxtLink>
-        <NuxtLink to="/images">images</NuxtLink>
         <NuxtLink to="/music">music</NuxtLink>
+        <a href="https://www.instagram.com/jordang.99/">instagram</a>
         <a href="https://twitter.com/JordanFromIT">twitter</a>
 
     </nav>
