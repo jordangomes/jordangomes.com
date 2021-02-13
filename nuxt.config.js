@@ -5,7 +5,7 @@ export default {
   // Global page headers (https://go.nuxtjs.dev/config-head)
   head: {
     titleTemplate: (chunk) => {
-      return chunk ? `${chunk} | Jordan Gomes` : 'Jordan Gomes'
+      return chunk ? `${chunk} | jordan gomes` : 'Jordan Gomes'
     },
     meta: [
       { charset: 'utf-8' },

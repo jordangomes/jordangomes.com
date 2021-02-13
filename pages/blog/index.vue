@@ -29,6 +29,11 @@
         .fetch()
       return { articles }
     },
+    head() {
+      return {
+        title: 'blog',
+      }
+    },
     methods: {
       formatDate(date) {
         const options = { year: 'numeric', month: 'long', day: 'numeric' }

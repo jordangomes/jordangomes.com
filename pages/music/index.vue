@@ -59,6 +59,11 @@
         this.audio.pause()
         next()
     },
+    head() {
+      return {
+        title: 'music',
+      }
+    },
     methods: {
         playSong(id) {
             this.songs.forEach(song => {
