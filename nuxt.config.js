@@ -1,7 +1,4 @@
 export default {
-  // Disable server-side rendering (https://go.nuxtjs.dev/ssr-mode)
-  ssr: false,
-
   // Target (https://go.nuxtjs.dev/config-target)
   target: 'static',
 
@@ -17,10 +14,6 @@ export default {
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
       { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;1,400&display=swap' }
     ]
-  },
-
-  generate: {
-    routes: ['/blog/author/Jordan%20Gomes', '/blog/first-post']
   },
 
   // Global CSS (https://go.nuxtjs.dev/config-css)
