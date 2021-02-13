@@ -19,6 +19,10 @@ export default {
     ]
   },
 
+  generate: {
+    routes: ['/blog/author/Jordan%20Gomes', '/blog/first-post']
+  },
+
   // Global CSS (https://go.nuxtjs.dev/config-css)
   css: [
   ],
