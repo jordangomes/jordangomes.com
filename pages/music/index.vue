@@ -55,6 +55,10 @@
             audio: new Audio()
         }
     },
+    beforeRouteLeave(to, from, next) {
+        this.audio.pause()
+        next()
+    },
     methods: {
         playSong(id) {
             this.songs.forEach(song => {
