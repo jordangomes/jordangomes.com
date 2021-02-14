@@ -36,18 +36,6 @@
         let error = ""
         let songs
         let sortedSongs = []
-        try{
-            songs = await $axios.$get('https://ksl3m408ya.execute-api.ap-southeast-2.amazonaws.com/default-deployment')
-            sortedSongs = songs.sort(function (a, b) {
-                const aDate = new Date(Date.parse(a.added_at))
-                const bDate = new Date(Date.parse(b.added_at))
-                return bDate - aDate
-            });
-        } catch(err) {
-            console.log(songs)
-            console.error(err)
-            error = "Couldn't download the tunes right now :( please come back later"
-        }
         let data = { 
             error,
             songs: sortedSongs, 
@@ -56,6 +44,19 @@
         }
         if (process.client) {
             data.audio = new Audio()
+            try{
+                songs = await $axios.$get('https://ksl3m408ya.execute-api.ap-southeast-2.amazonaws.com/default-deployment')
+                sortedSongs = songs.sort(function (a, b) {
+                    const aDate = new Date(Date.parse(a.added_at))
+                    const bDate = new Date(Date.parse(b.added_at))
+                    return bDate - aDate
+                });
+                data.songs = sortedSongs
+            } catch(err) {
+                console.log(songs)
+                console.error(err)
+                error = "Couldn't download the tunes right now :( please come back later"
+            }
         }
         return data
     },
