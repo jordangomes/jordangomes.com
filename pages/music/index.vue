@@ -48,16 +48,12 @@
             console.error(err)
             error = "Couldn't download the tunes right now :( please come back later"
         }
-        let data = { 
+        return { 
             error,
             songs: sortedSongs, 
             playingSong: "",
-            audio: {}
+            audio: ""
         }
-        if (process.client) {
-            data.audio = new Audio()
-        }
-        return data
     },
     beforeRouteLeave(to, from, next) {
         this.audio.pause()
