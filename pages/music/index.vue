@@ -52,7 +52,7 @@
             error,
             songs: sortedSongs, 
             playingSong: "",
-            audio: new Audio()
+            audio: ""
         }
     },
     beforeRouteLeave(to, from, next) {
