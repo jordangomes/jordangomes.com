@@ -75,9 +75,9 @@
                     console.log(`Playing ${song.track.name}`)
                     if(this.playingSong !== "") {
                         this.$refs[this.playingSong][0].classList.remove("active")
+                        this.audio.pause()
+                        this.audio.currentTime = 0;
                     }
-                    this.audio.pause()
-                    this.audio.currentTime = 0;
                     this.audio = new Audio(song.track.preview_url)
                     this.audio.addEventListener('ended', (event) => {
                         this.pauseSong()
