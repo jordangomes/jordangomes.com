@@ -59,6 +59,9 @@ import axios from 'axios'
         this.songs = sortedSongs
         this.error = error
     },
+    created() {
+        this.$fetch()
+    },
     methods: {
         playSong(id) {
             this.songs.forEach(song => {
