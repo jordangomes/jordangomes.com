@@ -21,7 +21,9 @@
         }
     },
     beforeRouteLeave(to, from, next) {
-        this.$refs.musicGrid.audio.pause()
+        if(typeof this.$refs.musicGrid.audio === "object") {
+            this.$refs.musicGrid.audio.pause()
+        }
         next()
     },
     head() {
