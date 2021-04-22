@@ -44,7 +44,7 @@ import axios from 'axios'
         let songs
         let sortedSongs = []
         try{
-            let response = await axios.get('https://ksl3m408ya.execute-api.ap-southeast-2.amazonaws.com/default-deployment')
+            let response = await axios.get('https://spotifyplaylist.apps.jordangomes.com/playlist')
             songs = response.data
             sortedSongs = songs.sort(function (a, b) {
                 const aDate = new Date(Date.parse(a.added_at))
