@@ -48,13 +48,20 @@ export default {
   buildModules: [
     // https://go.nuxtjs.dev/typescript
     '@nuxt/typescript-build',
-    '@nuxtjs/fontawesome'
+    '@nuxtjs/fontawesome',
+    'nuxt-ackee'
   ],
   fontawesome: {
     icons: {
       solid: ["faPause", "faPlay","faPauseCircle", "faPlayCircle"],
       brands: ['faSpotify']
     }
+  },
+  ackee: {
+    server: 'https://analytics.apps.jordangomes.com/',
+    domainId: '0baa51a5-e4a2-40ec-8849-a3340531c700',
+    ignoreLocalhost: false, // defaults to true
+    detailed: true // defaults to false
   },
 
   // Modules (https://go.nuxtjs.dev/config-modules)
